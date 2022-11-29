@@ -1,10 +1,10 @@
 parametrosCompilacao=-Wall -std=c99                                                                                                                                                                                                      
-nomePrograma=trabalho
+nomePrograma=lattes
 
 all: $(nomePrograma)
 
-$(nomePrograma): trabalho.o
-	gcc -o trabalho trabalho.o $(parametrosCompilacao)
+$(nomePrograma): lattes.o periodicos_conferencias.o 
+	gcc -o lattes lattes.o periodicos_conferencias.o $(parametrosCompilacao)
 
 .o: .c
 	gcc -c *.c $(parametrosCompilacao)
